@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云清的个人主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">MyPortfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#works">作品展示</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="菜单">☰</button>
+        </div>
+    </nav>
+
+    <!-- 主视觉区域 -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-avatar">
+                <div class="avatar-placeholder">👤</div>
+            </div>
+            <h1 class="hero-title">你好，我是<span class="highlight">刘德金</span></h1>
+            <p class="hero-subtitle">前端开发 / 全栈初级/ 创意爱好者</p>
+            <p class="hero-desc">热爱用代码创造美好的事物，专注于打造简洁优雅的用户体验。</p>
+            <div class="hero-actions">
+                <a href="#works" class="btn btn-primary">查看作品</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 自我介绍 -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>我对开发充满了热情，喜欢将创意转化为实际的产品。我享受解决问题的过程，现在仍在学习和成长，我相信我对开发的热爱将引领我不断前进。</p>
+                    <p>我喜欢探索新技术、阅读设计相关的书籍，也会把自己的学习心得记录下来。</p>
+                </div>
+                <div class="skills">
+                    <h3>技能</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">C#</span>
+                        <!-- <span class="tag">React</span> -->
+                        <span class="tag">UI 设计</span>
+                        <span class="tag">响应式布局</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="works" class="section works">
+        <div class="container">
+            <h2 class="section-title">作品展示</h2>
+            <div class="works-grid">
+                <!-- 作品卡片 1 -->
+                <div class="work-card">
+                    <div class="work-image" style="background-color: #f0f4f8;">
+                        <img src="resume.jpg" alt="个人简历" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+                    </div>
+                    <div class="work-info">
+                        <h3>项目一：个人简历</h3>
+                        <div class="work-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="work-links">
+                            <a href="resume.jpg" target="_blank" class="link-btn">查看简历 →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品卡片 2 -->
+                <div class="work-card">
+                    <div class="work-image" style="background-color: #fef3f0;">
+                        <span class="work-icon">🎬</span>
+                    </div>
+                    <div class="work-info">
+                        <h3>项目二：影音播放器</h3>
+                        <p>PyQt5 桌面影音播放器，支持视频/音频播放、播放列表管理、源地址解析（B站/YouTube等）、两侧音频频谱可视化。</p>
+                        <div class="work-tags">
+                            <span>Python</span>
+                            <span>PyQt5</span>
+                            <span>numpy</span>
+                        </div>
+                        <div class="work-links">
+                            <a href="player.html" target="_blank" class="link-btn" style="margin-right:12px;color:#22c55e;">▶ 运行程序</a>
+                            <a href="player.py" target="_blank" class="link-btn">查看源码 →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品卡片 3 -->
+                <!-- <div class="work-card">
+                    <div class="work-image" style="background-color: #f0faf4;">
+                        <span class="work-icon">🌐</span>
+                    </div>
+                    <div class="work-info">
+                        <h3>项目三：微信小程序</h3>
+                        <p></p>
+                        <div class="work-tags">
+                            <span>HTML</span>
+                            <span>API</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="work-links">
+                            <a href="#" class="link-btn">查看详情 →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品卡片 4 -->
+                <!-- <div class="work-card">
+                    <div class="work-image" style="background-color: #f5f0ff;">
+                        <span class="work-icon">💡</span>
+                    </div>
+                    <div class="work-info">
+                        <h3>项目四：个人AI作品集</h3>
+                        <p>高效利用AI技术，打造个性化作品集</p>
+                        <div class="work-tags">
+                            <span>AI</span>
+                            <span>CSS</span>
+                            <span>HTML</span>
+                        </div>
+                        <div class="work-links">
+                            <a href="#" class="link-btn">查看详情 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 MyPortfolio. 用 ❤️ 制作</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
