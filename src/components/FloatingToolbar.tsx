@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, MessageCircle, ArrowUp, QrCode, X } from 'lucide-react'
 
@@ -6,11 +6,11 @@ export default function FloatingToolbar() {
   const [showTop, setShowTop] = useState(false)
   const [showChat, setShowChat] = useState(false)
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', () => {
-      setShowTop(window.scrollY > 300)
-    })
-  }
+  useEffect(() => {
+    const handleScroll = () => setShowTop(window.scrollY > 300)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>

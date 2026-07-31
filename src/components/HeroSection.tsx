@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -156,14 +156,16 @@ function DNAHelix() {
 }
 
 function Particles() {
-  const particles = Array.from({ length: 20 }, (_, i) => ({
+  const particles = useMemo(() => Array.from({ length: 20 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
     size: Math.random() * 4 + 2,
     duration: Math.random() * 10 + 10,
     delay: Math.random() * 5,
-  }))
+    moveX: Math.random() * 20 - 10,
+    opacity: Math.random() * 0.3 + 0.1,
+  })), [])
 
   return (
     <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
@@ -177,12 +179,12 @@ function Particles() {
             width: p.size,
             height: p.size,
             borderRadius: '50%',
-            background: `rgba(33, 150, 243, ${Math.random() * 0.3 + 0.1})`,
+            background: `rgba(33, 150, 243, ${p.opacity})`,
             boxShadow: `0 0 ${p.size * 2}px rgba(33, 150, 243, 0.3)`,
           }}
           animate={{
             y: [0, -30, 0],
-            x: [0, Math.random() * 20 - 10, 0],
+            x: [0, p.moveX, 0],
             opacity: [0.2, 0.6, 0.2],
           }}
           transition={{
