@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>五心集团 - 致力于干细胞生物科技领域</title>
+    <script>
+      // GitHub Pages SPA routing: restore original URL after 404 redirect
+      (function() {
+        var redirectPath = sessionStorage.getItem('redirect_path');
+        if (redirectPath) {
+          sessionStorage.removeItem('redirect_path');
+          window.history.replaceState(null, '', redirectPath);
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
