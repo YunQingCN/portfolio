@@ -6,6 +6,7 @@ import { Menu, X, Globe, Search, ChevronDown } from 'lucide-react'
 interface NavLink {
   label: string
   path: string
+  anchor?: string
   children?: { label: string; path: string }[]
 }
 
@@ -33,7 +34,7 @@ const navLinks: NavLink[] = [
       { label: '行业资讯', path: '/news' },
     ],
   },
-  { label: '联系我们', path: '/#contact' },
+  { label: '联系我们', path: '/', anchor: 'contact' },
 ]
 
 export default function Navbar() {
@@ -54,17 +55,16 @@ export default function Navbar() {
     setHoveredMenu(null)
   }, [location])
 
-  const handleNavClick = (path: string) => {
-    if (path.startsWith('/#')) {
-      const id = path.slice(2)
+  const handleNavClick = (path: string, anchor?: string) => {
+    if (anchor) {
       if (location.pathname !== '/') {
         navigate('/')
         setTimeout(() => {
-          const el = document.getElementById(id)
+          const el = document.getElementById(anchor)
           if (el) el.scrollIntoView({ behavior: 'smooth' })
-        }, 100)
+        }, 300)
       } else {
-        const el = document.getElementById(id)
+        const el = document.getElementById(anchor)
         if (el) el.scrollIntoView({ behavior: 'smooth' })
       }
     }
@@ -121,7 +121,7 @@ export default function Navbar() {
                 if (link.children) {
                   e.preventDefault()
                 } else {
-                  handleNavClick(link.path)
+                  handleNavClick(link.path, link.anchor)
                 }
               }}
               style={{
@@ -243,7 +243,7 @@ export default function Navbar() {
               <div key={link.path}>
                 <Link
                   to={link.path}
-                  onClick={() => { handleNavClick(link.path); setIsOpen(false) }}
+                  onClick={() => { handleNavClick(link.path, link.anchor); setIsOpen(false) }}
                   style={{
                     display: 'block',
                     padding: '0.8rem 1rem',
