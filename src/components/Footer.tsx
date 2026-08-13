@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom'
 
+const friendLinks = [
+  { label: '干细胞', url: '#' },
+  { label: '免疫细胞的制备与储存', url: '#' },
+  { label: '人工智能的智慧康养体系', url: '#' },
+]
+
 export default function Footer() {
   return (
     <footer style={{
-      background: 'linear-gradient(180deg, #0a1525 0%, #070e17 100%)',
-      borderTop: '1px solid rgba(33, 150, 243, 0.1)',
+      background: 'linear-gradient(180deg, #0a1f6b 0%, #071550 100%)',
+      borderTop: '1px solid rgba(35, 203, 200, 0.1)',
       padding: '3rem 0 1.5rem',
     }}>
       <div className="container">
@@ -33,22 +39,26 @@ export default function Footer() {
             </div>
             <p style={{ color: 'var(--text-gray)', fontSize: '0.85rem', lineHeight: 1.7 }}>
               上海五心集团<br />
-              致力于干细胞生物科技领域
+              专注于细胞生物领域技术研发、应用及健康管理综合服务的高科技公司
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 style={{ color: '#fff', fontWeight: 600, marginBottom: '1rem', fontSize: '0.95rem' }}>快速导航</h4>
-            {['集团简介', '人才队伍', '科学研究'].map((item) => (
+            {[
+              { label: '集团简介', to: '/about' },
+              { label: '人才队伍', to: '/team' },
+              { label: '科学研究', to: '/research' },
+            ].map((item) => (
               <Link
-                key={item}
-                to="/"
+                key={item.label}
+                to={item.to}
                 style={{ display: 'block', color: 'var(--text-gray)', fontSize: '0.85rem', marginBottom: '0.5rem', transition: 'color 0.3s' }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--primary-teal)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-gray)' }}
               >
-                {item}
+                {item.label}
               </Link>
             ))}
           </div>
@@ -56,10 +66,23 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 style={{ color: '#fff', fontWeight: 600, marginBottom: '1rem', fontSize: '0.95rem' }}>服务项目</h4>
-            {['细胞储存', '细胞技术服务'].map((item) => (
-              <div key={item} style={{ color: 'var(--text-gray)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>
-                {item}
-              </div>
+            {[
+              { label: '细胞储存', to: '/cell-storage' },
+              { label: '细胞技术服务', to: '/cell-service' },
+              { label: '免疫细胞储存', to: '/cell-storage' },
+              { label: '脂肪干细胞', to: '/cell-storage' },
+              { label: '胎盘间充质干细胞', to: '/cell-storage' },
+              { label: '牙髓干细胞', to: '/cell-storage' },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                to={item.to}
+                style={{ display: 'block', color: 'var(--text-gray)', fontSize: '0.85rem', marginBottom: '0.5rem', transition: 'color 0.3s' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--primary-teal)' }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-gray)' }}
+              >
+                {item.label}
+              </Link>
             ))}
           </div>
 
@@ -69,8 +92,30 @@ export default function Footer() {
             <div style={{ color: 'var(--text-gray)', fontSize: '0.85rem', lineHeight: 2 }}>
               <div>服务热线：021-60835322</div>
               <div>邮箱：wxdc2022@outlook.com</div>
-              <div>上海市青浦区朱家角康业路388弄18号</div>
+              <div>上海市青浦区朱家角康业路388弄18号华科慧谷产业园七楼</div>
             </div>
+          </div>
+        </div>
+
+        {/* Friend Links */}
+        <div style={{
+          borderTop: '1px solid rgba(255,255,255,0.06)',
+          paddingTop: '1.5rem',
+          marginBottom: '1.5rem',
+        }}>
+          <h4 style={{ color: '#fff', fontWeight: 600, marginBottom: '0.8rem', fontSize: '0.9rem' }}>友情链接</h4>
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+            {friendLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.url}
+                style={{ color: 'var(--text-gray)', fontSize: '0.8rem', transition: 'color 0.3s' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--primary-teal)' }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-gray)' }}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -85,15 +130,6 @@ export default function Footer() {
         }}>
           <div style={{ color: 'var(--text-gray)', fontSize: '0.8rem' }}>
             © 2024 上海五心集团 版权所有 | 沪ICP备2021035221号-2
-          </div>
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <Link to="/business-card" style={{
-              color: 'var(--primary-teal)',
-              fontSize: '0.85rem',
-              fontWeight: 500,
-            }}>
-              员工名片生成 →
-            </Link>
           </div>
         </div>
       </div>

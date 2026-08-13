@@ -14,7 +14,7 @@ export default function AboutSection() {
   return (
     <section id="about" ref={ref} style={{
       padding: '6rem 0',
-      background: 'linear-gradient(180deg, #060e1a 0%, #0a1628 100%)',
+      background: 'linear-gradient(180deg, #0a1f6b 0%, #0d2570 100%)',
     }}>
       <div className="container">
         <motion.h2
@@ -44,8 +44,8 @@ export default function AboutSection() {
               width: '100%',
               height: 350,
               borderRadius: 16,
-              background: 'linear-gradient(135deg, rgba(232, 115, 74, 0.15), rgba(244, 162, 97, 0.1))',
-              border: '1px solid rgba(232, 115, 74, 0.15)',
+              background: 'linear-gradient(135deg, rgba(35, 203, 200, 0.15), rgba(39, 204, 200, 0.1))',
+              border: '1px solid rgba(35, 203, 200, 0.15)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -57,12 +57,12 @@ export default function AboutSection() {
                 width: 200,
                 height: 200,
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(232, 115, 74, 0.2) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(35, 203, 200, 0.2) 0%, transparent 70%)',
                 animation: 'pulse 3s ease-in-out infinite',
               }} />
               <div style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
                 <div style={{ fontSize: '4rem', marginBottom: '0.5rem' }}>🌸</div>
-                <div style={{ color: 'var(--primary-teal)', fontSize: '1.1rem', fontWeight: 600 }}>五心公益</div>
+                <div style={{ color: 'var(--primary-teal)', fontSize: '1.1rem', fontWeight: 600 }}>五心集团</div>
               </div>
             </div>
           </motion.div>
@@ -85,8 +85,8 @@ export default function AboutSection() {
               {['干细胞生物科技', '细胞技术服务', '细胞储存'].map((tag) => (
                 <span key={tag} style={{
                   padding: '0.4rem 1rem',
-                  background: 'rgba(232, 115, 74, 0.1)',
-                  border: '1px solid rgba(232, 115, 74, 0.2)',
+                  background: 'rgba(35, 203, 200, 0.1)',
+                  border: '1px solid rgba(35, 203, 200, 0.2)',
                   borderRadius: 20,
                   fontSize: '0.85rem',
                   color: 'var(--primary-teal)',
@@ -116,7 +116,7 @@ export default function AboutSection() {
                 padding: '2rem 1rem',
                 background: 'var(--bg-card)',
                 borderRadius: 16,
-                border: '1px solid rgba(232, 115, 74, 0.08)',
+                border: '1px solid rgba(35, 203, 200, 0.08)',
               }}
             >
               <div style={{

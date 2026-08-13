@@ -7,19 +7,19 @@ const slides = [
     title: '五心集团',
     subtitle: '致力于干细胞生物科技领域',
     description: '拥有国内干细胞领域核心科学家团队，与各大医疗机构深度合作',
-    bg: 'radial-gradient(ellipse at 30% 50%, rgba(33, 150, 243, 0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(100, 181, 246, 0.1) 0%, transparent 50%), linear-gradient(180deg, #1a2a4a 0%, #0d1b2a 100%)',
+    bg: 'radial-gradient(ellipse at 60% 40%, rgba(55, 165, 219, 0.12) 0%, transparent 60%), radial-gradient(ellipse at 20% 70%, rgba(35, 203, 200, 0.08) 0%, transparent 50%), linear-gradient(180deg, #2D56A5 0%, #0a1f6b 100%)',
   },
   {
-    title: '120+ 服务案例',
-    subtitle: '客户满意度100%',
-    description: '驻全球办事处 15+ 与各大医疗机构和高科技生物公司进行深度合作，推动行业发展',
-    bg: 'radial-gradient(ellipse at 60% 40%, rgba(100, 181, 246, 0.12) 0%, transparent 60%), radial-gradient(ellipse at 20% 70%, rgba(33, 150, 243, 0.08) 0%, transparent 50%), linear-gradient(180deg, #2a3f6f 0%, #0d1b2a 100%)',
+    title: '生物医药进入免疫细胞时代',
+    subtitle: 'CCTV10 央视报道',
+    description: '李先亮教授采访中谈到现在的生物医药已经进入免疫细胞时代',
+    bg: 'radial-gradient(ellipse at 30% 50%, rgba(35, 203, 200, 0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(55, 165, 219, 0.1) 0%, transparent 50%), linear-gradient(180deg, #112F91 0%, #0a1f6b 100%)',
   },
   {
-    title: '五心科技',
-    subtitle: '科技创新，关爱未来',
-    description: '',
-    bg: 'radial-gradient(ellipse at 50% 50%, rgba(25, 118, 210, 0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(33, 150, 243, 0.1) 0%, transparent 50%), linear-gradient(180deg, #1a2a4a 0%, #2a3f6f 100%)',
+    title: '干细胞成医学发展重要方向',
+    subtitle: '2022年两会聚焦',
+    description: '干细胞技术成为医学发展的重要方向，五心集团积极推动行业标准化建设',
+    bg: 'radial-gradient(ellipse at 50% 50%, rgba(39, 204, 200, 0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(35, 203, 200, 0.1) 0%, transparent 50%), linear-gradient(180deg, #112F91 0%, #2D56A5 100%)',
   },
 ]
 
@@ -67,9 +67,9 @@ function DNAHelix() {
           const grad = ctx.createLinearGradient(x1, y, x2, y)
           const alpha1 = (z1 + 1) / 2 * 0.35 + 0.05
           const alpha2 = (z2 + 1) / 2 * 0.35 + 0.05
-          grad.addColorStop(0, `rgba(33, 150, 243, ${alpha1})`)
-          grad.addColorStop(0.5, `rgba(100, 181, 246, 0.15)`)
-          grad.addColorStop(1, `rgba(33, 150, 243, ${alpha2})`)
+          grad.addColorStop(0, `rgba(35, 203, 200, ${alpha1})`)
+          grad.addColorStop(0.5, `rgba(55, 165, 219, 0.15)`)
+          grad.addColorStop(1, `rgba(35, 203, 200, ${alpha2})`)
           ctx.beginPath()
           ctx.moveTo(x1, y)
           ctx.lineTo(x2, y)
@@ -83,10 +83,10 @@ function DNAHelix() {
         const alpha1Node = (z1 + 1) / 2 * 0.6 + 0.2
         ctx.beginPath()
         ctx.arc(x1, y, size1, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(33, 150, 243, ${alpha1Node})`
+        ctx.fillStyle = `rgba(35, 203, 200, ${alpha1Node})`
         ctx.fill()
         if (z1 > 0.3) {
-          ctx.shadowColor = 'rgba(33, 150, 243, 0.4)'
+          ctx.shadowColor = 'rgba(35, 203, 200, 0.4)'
           ctx.shadowBlur = 8
           ctx.fill()
           ctx.shadowBlur = 0
@@ -97,10 +97,10 @@ function DNAHelix() {
         const alpha2Node = (z2 + 1) / 2 * 0.6 + 0.2
         ctx.beginPath()
         ctx.arc(x2, y, size2, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(100, 181, 246, ${alpha2Node})`
+        ctx.fillStyle = `rgba(55, 165, 219, ${alpha2Node})`
         ctx.fill()
         if (z2 > 0.3) {
-          ctx.shadowColor = 'rgba(100, 181, 246, 0.4)'
+          ctx.shadowColor = 'rgba(55, 165, 219, 0.4)'
           ctx.shadowBlur = 8
           ctx.fill()
           ctx.shadowBlur = 0
@@ -116,14 +116,14 @@ function DNAHelix() {
           ctx.beginPath()
           ctx.moveTo(prevX1, prevY)
           ctx.lineTo(x1, y)
-          ctx.strokeStyle = `rgba(33, 150, 243, 0.25)`
+          ctx.strokeStyle = `rgba(35, 203, 200, 0.25)`
           ctx.lineWidth = 1
           ctx.stroke()
 
           ctx.beginPath()
           ctx.moveTo(prevX2, prevY)
           ctx.lineTo(x2, y)
-          ctx.strokeStyle = `rgba(100, 181, 246, 0.25)`
+          ctx.strokeStyle = `rgba(55, 165, 219, 0.25)`
           ctx.lineWidth = 1
           ctx.stroke()
         }
@@ -179,8 +179,8 @@ function Particles() {
             width: p.size,
             height: p.size,
             borderRadius: '50%',
-            background: `rgba(33, 150, 243, ${p.opacity})`,
-            boxShadow: `0 0 ${p.size * 2}px rgba(33, 150, 243, 0.3)`,
+            background: `rgba(35, 203, 200, ${p.opacity})`,
+            boxShadow: `0 0 ${p.size * 2}px rgba(35, 203, 200, 0.3)`,
           }}
           animate={{
             y: [0, -30, 0],
@@ -252,8 +252,8 @@ export default function HeroSection() {
             width: '500px',
             height: '500px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(33, 150, 243, 0.08) 0%, transparent 70%)',
-            border: '1px solid rgba(33, 150, 243, 0.06)',
+            background: 'radial-gradient(circle, rgba(35, 203, 200, 0.08) 0%, transparent 70%)',
+            border: '1px solid rgba(35, 203, 200, 0.06)',
           }} />
           <div style={{
             position: 'absolute',
@@ -262,7 +262,7 @@ export default function HeroSection() {
             width: '300px',
             height: '300px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(100, 181, 246, 0.06) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(55, 165, 219, 0.06) 0%, transparent 70%)',
           }} />
         </motion.div>
       </AnimatePresence>
@@ -294,7 +294,7 @@ export default function HeroSection() {
                 fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
                 fontWeight: 900,
                 marginBottom: '1rem',
-                background: 'linear-gradient(135deg, #fff 0%, var(--accent-cyan) 100%)',
+                background: 'linear-gradient(135deg, #fff 0%, var(--primary-teal) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -343,7 +343,7 @@ export default function HeroSection() {
                 fontSize: '0.95rem',
                 transition: 'transform 0.3s, box-shadow 0.3s',
               }}
-                onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 30px rgba(33, 150, 243, 0.3)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 30px rgba(35, 203, 200, 0.3)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
               >
                 了解更多
@@ -357,7 +357,7 @@ export default function HeroSection() {
                 fontSize: '0.95rem',
                 transition: 'all 0.3s',
               }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.1)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(35, 203, 200, 0.1)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent' }}
               >
                 联系我们
@@ -424,7 +424,7 @@ export default function HeroSection() {
             color: '#fff',
             transition: 'all 0.3s',
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.2)' }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(35, 203, 200, 0.2)' }}
           onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)' }}
         >
           <ChevronLeft size={20} />
@@ -447,7 +447,7 @@ export default function HeroSection() {
             color: '#fff',
             transition: 'all 0.3s',
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.2)' }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(35, 203, 200, 0.2)' }}
           onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)' }}
         >
           <ChevronRight size={20} />

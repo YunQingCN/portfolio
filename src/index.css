@@ -5,19 +5,19 @@
 }
 
 :root {
-  --primary-dark: #1a2a4a;
-  --primary-blue: #2a3f6f;
-  --primary-teal: #2196F3;
-  --accent-cyan: #64B5F6;
-  --accent-green: #1976D2;
+  --primary-dark: #112F91;
+  --primary-blue: #2D56A5;
+  --primary-teal: #23CBC8;
+  --accent-cyan: #37A5DB;
+  --accent-green: #27CCC8;
   --text-white: #ffffff;
   --text-light: #e8eef6;
-  --text-gray: #8fa4be;
-  --bg-dark: #0d1b2a;
+  --text-gray: #8D8888;
+  --bg-dark: #112F91;
   --bg-card: rgba(255, 255, 255, 0.05);
   --bg-card-hover: rgba(255, 255, 255, 0.1);
-  --gradient-primary: linear-gradient(135deg, #2196F3, #64B5F6);
-  --gradient-dark: linear-gradient(180deg, #1a2a4a 0%, #0d1b2a 100%);
+  --gradient-primary: linear-gradient(135deg, #23CBC8, #37A5DB);
+  --gradient-dark: linear-gradient(180deg, #112F91 0%, #0a1f6b 100%);
 }
 
 html {
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg-dark);
   color: var(--text-white);
   overflow-x: hidden;
@@ -52,7 +52,7 @@ input, textarea {
 
 input:focus, textarea:focus {
   border-color: var(--primary-teal) !important;
-  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.15);
+  box-shadow: 0 0 0 3px rgba(35, 203, 200, 0.15);
 }
 
 input::placeholder, textarea::placeholder {
@@ -74,7 +74,7 @@ input::placeholder, textarea::placeholder {
 }
 
 ::selection {
-  background: rgba(33, 150, 243, 0.3);
+  background: rgba(35, 203, 200, 0.3);
   color: #fff;
 }
 
@@ -87,6 +87,7 @@ input::placeholder, textarea::placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: #fff;
 }
 
 .section-subtitle {

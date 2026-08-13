@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, MessageCircle, ArrowUp, QrCode, X } from 'lucide-react'
+import { Phone, MessageCircle, ArrowUp, X } from 'lucide-react'
 
 export default function FloatingToolbar() {
   const [showTop, setShowTop] = useState(false)
@@ -32,7 +32,7 @@ export default function FloatingToolbar() {
             width: 48, height: 48, borderRadius: '50%',
             background: 'var(--primary-teal)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 4px 15px rgba(33, 150, 243, 0.3)',
+            boxShadow: '0 4px 15px rgba(35, 203, 200, 0.3)',
             color: '#fff',
           }}
         >
@@ -47,28 +47,13 @@ export default function FloatingToolbar() {
             width: 48, height: 48, borderRadius: '50%',
             background: 'var(--accent-cyan)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 4px 15px rgba(244, 162, 97, 0.3)',
+            boxShadow: '0 4px 15px rgba(55, 165, 219, 0.3)',
             color: '#fff',
             border: 'none',
           }}
         >
           <MessageCircle size={20} />
         </motion.button>
-
-        {/* QR Code / Business Card */}
-        <motion.a
-          href="/business-card"
-          whileHover={{ scale: 1.1 }}
-          style={{
-            width: 48, height: 48, borderRadius: '50%',
-            background: 'var(--accent-green)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 4px 15px rgba(231, 111, 81, 0.3)',
-            color: '#fff',
-          }}
-        >
-          <QrCode size={20} />
-        </motion.a>
 
         {/* Back to top */}
         <AnimatePresence>
@@ -107,17 +92,17 @@ export default function FloatingToolbar() {
               bottom: '8rem',
               zIndex: 999,
               width: 320,
-              background: 'rgba(13, 27, 42, 0.98)',
+              background: 'rgba(17, 47, 145, 0.98)',
               backdropFilter: 'blur(20px)',
               borderRadius: 16,
-              border: '1px solid rgba(33, 150, 243, 0.15)',
+              border: '1px solid rgba(35, 203, 200, 0.15)',
               boxShadow: '0 10px 40px rgba(0, 0, 0, 0.5)',
               overflow: 'hidden',
             }}
           >
             <div style={{
               padding: '1rem',
-              background: 'linear-gradient(135deg, #2196F3, #42A5F5)',
+              background: 'linear-gradient(135deg, #23CBC8, #37A5DB)',
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
@@ -160,7 +145,7 @@ export default function FloatingToolbar() {
                   width: '100%',
                   padding: '0.6rem 0.8rem',
                   background: 'var(--bg-card)',
-                  border: '1px solid rgba(33, 150, 243, 0.15)',
+                  border: '1px solid rgba(35, 203, 200, 0.15)',
                   borderRadius: 8,
                   color: '#fff',
                   fontSize: '0.85rem',

@@ -18,7 +18,7 @@ export default function ContactSection() {
   return (
     <section id="contact" ref={ref} style={{
       padding: '6rem 0',
-      background: 'linear-gradient(180deg, #0f1d35 0%, #0d1b2a 50%, #0a1525 100%)',
+      background: 'linear-gradient(180deg, #0a1f6b 0%, #112F91 50%, #0a1f6b 100%)',
     }}>
       <div className="container">
         <motion.h2
@@ -67,12 +67,12 @@ export default function ContactSection() {
                   padding: '1rem',
                   background: 'var(--bg-card)',
                   borderRadius: 12,
-                  border: '1px solid rgba(33, 150, 243, 0.08)',
+                  border: '1px solid rgba(35, 203, 200, 0.08)',
                 }}
               >
                 <div style={{
                   width: 44, height: 44, borderRadius: 12,
-                  background: 'rgba(33, 150, 243, 0.1)',
+                  background: 'rgba(35, 203, 200, 0.1)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   flexShrink: 0,
                 }}>
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 style={{
                   padding: '0.9rem 1.2rem',
                   background: 'var(--bg-card)',
-                  border: '1px solid rgba(33, 150, 243, 0.15)',
+                  border: '1px solid rgba(35, 203, 200, 0.15)',
                   borderRadius: 10,
                   color: '#fff',
                   fontSize: '0.95rem',
@@ -120,7 +120,7 @@ export default function ContactSection() {
                 style={{
                   padding: '0.9rem 1.2rem',
                   background: 'var(--bg-card)',
-                  border: '1px solid rgba(33, 150, 243, 0.15)',
+                  border: '1px solid rgba(35, 203, 200, 0.15)',
                   borderRadius: 10,
                   color: '#fff',
                   fontSize: '0.95rem',
@@ -134,7 +134,7 @@ export default function ContactSection() {
                 style={{
                   padding: '0.9rem 1.2rem',
                   background: 'var(--bg-card)',
-                  border: '1px solid rgba(33, 150, 243, 0.15)',
+                  border: '1px solid rgba(35, 203, 200, 0.15)',
                   borderRadius: 10,
                   color: '#fff',
                   fontSize: '0.95rem',
@@ -148,7 +148,7 @@ export default function ContactSection() {
                 style={{
                   padding: '0.9rem 1.2rem',
                   background: 'var(--bg-card)',
-                  border: '1px solid rgba(33, 150, 243, 0.15)',
+                  border: '1px solid rgba(35, 203, 200, 0.15)',
                   borderRadius: 10,
                   color: '#fff',
                   fontSize: '0.95rem',

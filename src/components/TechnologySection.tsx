@@ -1,41 +1,40 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
-import { Shield, Database, Cpu, FlaskConical } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { Shield, Database, Cpu } from 'lucide-react'
 
 const technologies = [
   {
     icon: Shield,
     title: '集团简介',
     description: '五心集团致力于干细胞生物科技领域，120+合作企业&伙伴',
-    color: '#2196F3',
+    color: '#23CBC8',
+    path: '/about',
   },
   {
     icon: Database,
     title: '人才队伍',
-    description: '拥有国内干细胞领域核心科学家团队',
-    color: '#64B5F6',
+    description: '120+合作企业&伙伴，拥有国内干细胞领域核心科学家团队',
+    color: '#37A5DB',
+    path: '/team',
   },
   {
     icon: Cpu,
     title: '科学研究',
-    description: '与各大医疗机构和高科技生物公司进行深度合作',
-    color: '#1976D2',
-  },
-  {
-    icon: FlaskConical,
-    title: '五心公益',
-    description: '敬老爱老，传递温暖，积极履行社会责任',
-    color: '#42A5F5',
+    description: '120+合作企业&伙伴，与各大医疗机构和高科技生物公司进行深度合作',
+    color: '#27CCC8',
+    path: '/research',
   },
 ]
 
 export default function TechnologySection() {
   const { ref, inView } = useInView()
+  const navigate = useNavigate()
 
   return (
     <section id="technology" ref={ref} style={{
       padding: '6rem 0',
-      background: 'linear-gradient(180deg, #0d1b2a 0%, #0e1f35 40%, #0d1b2a 100%)',
+      background: 'linear-gradient(180deg, #0a1f6b 0%, #112F91 40%, #0a1f6b 100%)',
     }}>
       <div className="container">
         <motion.h2
@@ -57,7 +56,7 @@ export default function TechnologySection() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
+          gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '1.5rem',
         }}>
           {technologies.map((tech, i) => (
@@ -71,17 +70,18 @@ export default function TechnologySection() {
                 padding: '2rem 1.5rem',
                 background: 'var(--bg-card)',
                 borderRadius: 16,
-                border: '1px solid rgba(33, 150, 243, 0.08)',
+                border: '1px solid rgba(35, 203, 200, 0.08)',
                 textAlign: 'center',
                 cursor: 'pointer',
                 transition: 'border-color 0.3s, box-shadow 0.3s',
               }}
+              onClick={() => navigate(tech.path)}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = `${tech.color}40`
                 e.currentTarget.style.boxShadow = `0 8px 30px ${tech.color}15`
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(33, 150, 243, 0.08)'
+                e.currentTarget.style.borderColor = 'rgba(35, 203, 200, 0.08)'
                 e.currentTarget.style.boxShadow = 'none'
               }}
             >

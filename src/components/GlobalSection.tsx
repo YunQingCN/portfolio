@@ -16,7 +16,7 @@ export default function GlobalSection() {
   return (
     <section id="global" ref={ref} style={{
       padding: '6rem 0',
-      background: 'linear-gradient(180deg, #0c1a30 0%, #1a2a4a 50%, #0f1d35 100%)',
+      background: 'linear-gradient(180deg, #0a1f6b 0%, #112F91 50%, #0a1f6b 100%)',
     }}>
       <div className="container">
         <motion.h2
@@ -45,8 +45,8 @@ export default function GlobalSection() {
             width: '100%',
             padding: '3rem 2rem',
             borderRadius: 20,
-            background: 'linear-gradient(135deg, rgba(33, 150, 243, 0.15), rgba(100, 181, 246, 0.1))',
-            border: '1px solid rgba(33, 150, 243, 0.2)',
+            background: 'linear-gradient(135deg, rgba(35, 203, 200, 0.15), rgba(55, 165, 219, 0.1))',
+            border: '1px solid rgba(35, 203, 200, 0.2)',
             textAlign: 'center',
             marginBottom: '3rem',
             position: 'relative',
@@ -60,7 +60,7 @@ export default function GlobalSection() {
             width: 200,
             height: 200,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(33, 150, 243, 0.1) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(35, 203, 200, 0.1) 0%, transparent 70%)',
           }} />
           <div style={{
             position: 'absolute',
@@ -69,7 +69,7 @@ export default function GlobalSection() {
             width: 150,
             height: 150,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(100, 181, 246, 0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(55, 165, 219, 0.08) 0%, transparent 70%)',
           }} />
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🌸</div>
@@ -119,7 +119,7 @@ export default function GlobalSection() {
                 padding: '1.5rem 1rem',
                 background: 'var(--bg-card)',
                 borderRadius: 16,
-                border: '1px solid rgba(33, 150, 243, 0.08)',
+                border: '1px solid rgba(35, 203, 200, 0.08)',
                 cursor: 'default',
               }}
             >
@@ -127,7 +127,7 @@ export default function GlobalSection() {
                 width: 50,
                 height: 50,
                 borderRadius: '50%',
-                background: 'rgba(33, 150, 243, 0.12)',
+                background: 'rgba(35, 203, 200, 0.12)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -170,7 +170,7 @@ export default function GlobalSection() {
                   padding: '1.5rem',
                   background: 'var(--bg-card)',
                   borderRadius: 12,
-                  border: '1px solid rgba(33, 150, 243, 0.08)',
+                  border: '1px solid rgba(35, 203, 200, 0.08)',
                   cursor: 'pointer',
                 }}
               >
